@@ -14,7 +14,7 @@ namespace Unity.FPS.Game
 
         ActorsManager m_ActorsManager;
 
-        void Start()
+        void Awake()
         {
             m_ActorsManager = GameObject.FindObjectOfType<ActorsManager>();
             DebugUtility.HandleErrorIfNullFindObject<ActorsManager, Actor>(m_ActorsManager, this);
