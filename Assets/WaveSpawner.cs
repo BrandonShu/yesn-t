@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using UnityEngine;
+using TMPro;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class WaveSpawner : MonoBehaviour
 
     public int currentWave = 0;
 
+    [SerializeField] TextMeshProUGUI text;
 
     void Awake()
     {
@@ -31,6 +33,7 @@ public class WaveSpawner : MonoBehaviour
         {
             StartCoroutine(NextWave());
         }
+        text.text = "Wave: " + currentWave;
 
     }
 
