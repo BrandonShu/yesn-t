@@ -60,7 +60,7 @@ public class WaveSpawner : MonoBehaviour
         Transform spawnPoint = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
 
         // Instantiate the enemy
-        GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
 
         // Add the new enemy to the list of alive enemies
         //m_EnemyManager.Actors.Add(enemy);
